@@ -1,7 +1,7 @@
 use crate::element_types;
-use crate::effects;
+use crate::effect;
 
-pub struct Element<E: effects::Effect, T: element_types::ElementType> {
+pub struct Element<E: effect::Effect, T: element_types::ElementType> {
     element_type: T,
     effects: Vec<E>,
     layer: u32,
