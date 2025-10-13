@@ -1,7 +1,7 @@
 use crate::effect::Effect;
 
-pub struct Split {
+pub struct Gap {
     layer: i32
 }
 
-impl Effect for Split {}
+impl Effect for Gap {}

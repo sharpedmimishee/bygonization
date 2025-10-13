@@ -1,6 +1,7 @@
 use crate::element_types;
+use image::RgbaImage;
 
-pub struct text {
+pub struct Text {
     text: String,
     font: String,
     size: u32,
@@ -9,4 +10,9 @@ pub struct text {
     pos: (i32, i32)
 }
 
-impl element_types::ElementType for text {}
+impl element_types::ElementType for Text {
+    fn type_drawing(&self) -> RgbaImage {
+        //Must change this behavior
+        return RgbaImage::new(1, 1);
+    }
+}

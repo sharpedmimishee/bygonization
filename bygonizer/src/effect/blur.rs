@@ -1,7 +1,7 @@
 use crate::effect::Effect;
 
-pub struct Split {
+pub struct Blur {
     layer: i32
 }
 
-impl Effect for Split {}
+impl Effect for Blur {}
