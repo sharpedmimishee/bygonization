@@ -1,2 +1,8 @@
 bygonization.exe
 bygonizer/target/
+bygonizer/output/
+
+
+# Added by cargo
+
+/target
