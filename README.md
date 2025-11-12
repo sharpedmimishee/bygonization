@@ -16,7 +16,7 @@ Bygonization and Bygonizer are licensed under MIT License.
 
 ## Used libraries/crates
 [image](https://github.com/image-rs/image) - MIT https://github.com/image-rs/image/blob/main/LICENSE-MIT  
-[imageproc](https://github.com/image-rs/imageproc) - MIT https://github.com/image-rs/imageproc/blob/master/LICENSE
-[ab_glyph](https://github.com/alexheretic/ab-glyph) - APACHE-2.0 https://github.com/sharpedmimishee/bygonization/blob/main/AB-GLYPH-APACHE-LICENSE
-[gpui](https://github.com/zed-industries/zed/tree/main/crates/gpui) - APACHE-2.0 https://github.com/sharpedmimishee/bygonization/blob/main/GPUI-APACHE-LICENSE
-[gpui-component](https://github.com/longbridge/gpui-component) - APACHE-2.0 https://github.com/sharpedmimishee/bygonization/blob/main/GPUI-COMPONENT-APACHE-LICENSE
+[imageproc](https://github.com/image-rs/imageproc) - MIT https://github.com/image-rs/imageproc/blob/master/LICENSE  
+[ab_glyph](https://github.com/alexheretic/ab-glyph) - APACHE-2.0 https://github.com/sharpedmimishee/bygonization/blob/main/AB-GLYPH-APACHE-LICENSE  
+[gpui](https://github.com/zed-industries/zed/tree/main/crates/gpui) - APACHE-2.0 https://github.com/sharpedmimishee/bygonization/blob/main/GPUI-APACHE-LICENSE  
+[gpui-component](https://github.com/longbridge/gpui-component) - APACHE-2.0 https://github.com/sharpedmimishee/bygonization/blob/main/GPUI-COMPONENT-APACHE-LICENSE  
