@@ -1,21 +1,13 @@
-use crate::RgbaImage;
-
-pub mod text;
-pub mod video;
-pub mod audio;
-pub mod image;
+use image::RgbaImage;
 pub mod shape;
+pub mod basictext;
 
 pub trait ElementType {
-    fn type_drawing(&self) -> RgbaImage;
-}
-/// `VisualElement` is for visual element such as [`Text`] and [`Video`],
-pub trait VisualElement {
-    /// Get positions as tuple.
-    fn get_pos(&self) -> (i32, i32);
-    /// Get aspect of width and height as tuple
-    fn get_magnification(&self) -> (u32, u32);
-    /// Get size length of width and height as tuple.
-    fn get_size_length(&self) -> (u32, u32);
+    fn drawing(&self, width: u32, height: u32, frame: u32) -> RgbaImage;
 }
 
+pub trait VisualElementType {
+    fn get_magnification(&self) -> (u32, u32);
+    fn get_pos(&self) -> (i32, i32);
+}
+pub trait AuditoryElementType {}

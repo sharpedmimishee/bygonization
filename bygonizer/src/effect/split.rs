@@ -1,7 +1,0 @@
-use crate::effect::Effect;
-
-pub struct Split {
-    layer: i32
-}
-
-impl Effect for Split {}

@@ -1,22 +1,25 @@
-use crate::element_types;
-use crate::effect;
-use image::{self, RgbaImage};
+use crate::element_types::ElementType;
 
-pub struct Element<E: effect::Effect, T: element_types::ElementType> {
-    pub element_type: T,
-    pub effects: Vec<E>,
-    pub layer: u32,
-    pub time_begin: u32,
-    pub time_end: u32
+// #[derive(Clone)]
+pub struct Element<T: ElementType + ?Sized> {
+    pub element_type: Box<T>,
+    pub begin_time: u32,
+    pub end_time: u32,
+    // Effects should be splited as Visual and Auditory.
+    // effects: Vec<E>,
 }
-//Need to match element_types() using VisualElement trait. (Exempli gratia, type of Audio doesn't need to convert to rgbaImage.)
-impl<E: effect::Effect, T: element_types::ElementType + element_types::VisualElement> Element<E, T> {
-    pub fn convert_to_rgbaimage(&self) -> RgbaImage {
-        //Get self scale.
-        let element_type = &self.element_type;
-        let image = element_type.type_drawing();
-        //Apply effects of a list of a element.
-        //Return Value
-        return image;
+
+impl<T: ElementType + ?Sized> Element<T> {
+    pub fn get_time(&self) -> (u32, u32) {
+        return (self.begin_time, self.end_time);
     }
+    // ///`convert_to_RgbaImage()` is for converting a element of a visual element type to RgbaImage format.
+    // ///Trait border is set as ElementType only because if the trait border is set as VisualElement,
+    // ///`specific_encode()` cannot use this method because `elements` field of `Layer` has any type
+    // ///element.
+    // pub fn convert_to_RgbaImage(&self) -> RgbaImage{
+    //     let element_type = &self.element_type;
+    //     let image = element_type.drawing();
+    //     return image;
+    // }
 }

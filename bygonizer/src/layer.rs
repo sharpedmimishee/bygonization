@@ -1,14 +1,19 @@
-use crate::element;
-use crate::element_types;
-use crate::effect;
+use crate::element::Element;
+use crate::element_types::ElementType;
 
-pub struct Layer<E: effect::Effect, T: element_types::ElementType> {
-    pub number: u32,
-    pub elements: Vec<element::Element<E, T>>
+pub struct Layer {
+    pub elements: Vec<Element<dyn ElementType>>,
+    // name: String
 }
 
-impl<E: effect::Effect, T: element_types::ElementType> Layer<E, T> {
-    pub fn new(number: u32, elements: Vec<element::Element<E, T>>) -> Layer<E, T> {
-        return Layer {number, elements}
+impl Layer {
+    // fn get_elements(&self) -> Vec<Element<dyn ElementType>> {
+    //     let elements = &self.elements;
+    //     return *elements.clone();
+    // }
+    pub fn new(elements: Vec<Element<dyn ElementType>>) -> Self {
+        return Self {
+            elements,
+        };
     }
 }
